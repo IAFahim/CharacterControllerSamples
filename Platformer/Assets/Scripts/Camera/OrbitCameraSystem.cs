@@ -101,7 +101,7 @@ public partial struct OrbitCameraSystem : ISystem
     public partial struct OrbitCameraJob : IJobEntity
     {
         public TimeData TimeData;
-        public PhysicsWorld PhysicsWorld;
+        [ReadOnly] public PhysicsWorld PhysicsWorld;
 
         public ComponentLookup<LocalToWorld> LocalToWorldLookup;
         [ReadOnly] public ComponentLookup<KinematicCharacterBody> KinematicCharacterBodyLookup;
